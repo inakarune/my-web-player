@@ -1,11 +1,12 @@
 import React from 'react';
-import { faPlay, faRedo, faTrashAlt, faReplyAll, faPause, faStepForward, faStepBackward } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faRedo, faReplyAll, faPause, faStepForward, faStepBackward } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Player.scss';
 
 interface PropsFromApp {
     name: string;
     url: string;
+    nextSong: (direction: string) => void;
 }
 class Player extends React.Component<PropsFromApp> {
     private audioRef: any;
@@ -71,10 +72,6 @@ class Player extends React.Component<PropsFromApp> {
         this.setState({ time: `${ min }:${ sec } | ${ dmin }:${ dsec }`, width: `${ now }px` });
     }
 
-    private nextSong = (keyword: string): void => {
-
-    }
-
     render(): JSX.Element {
         return (
             <div className="player-box">
@@ -88,11 +85,10 @@ class Player extends React.Component<PropsFromApp> {
                 <p className="timeline"><span>{ this.state.time !== '00:00' ? this.state.time.split(' | ')[0] : null }</span><span>{ this.state.time !== '00:00' ? this.state.time.split(' | ')[1] : null }</span></p>
                 <div className="player-btn-box">
                     <button title="repeat" onClick={ this.repeat } className="repeat-btn"><FontAwesomeIcon icon={ faRedo } size="1x" color={ this.state.repeatOnOFF } /></button>
-                    <button className="backward" onClick={ () => this.nextSong('back') } title="play"><FontAwesomeIcon icon={ faStepBackward } size="1x" color="#414141"/></button>
+                    <button className="backward" onClick={ () => this.props.nextSong('back') } title="play"><FontAwesomeIcon icon={ faStepBackward } size="1x" color="#414141"/></button>
                     <button className={ this.state.playStatus } onClick={ this.play } title="play"><FontAwesomeIcon icon={ this.state.playBtn } size="1x" /></button>
-                    <button className="forward" onClick={ () => this.nextSong('next') } title="play"><FontAwesomeIcon icon={ faStepForward } size="1x" color="#414141"/></button>
+                    <button className="forward" onClick={ () => this.props.nextSong('next') } title="play"><FontAwesomeIcon icon={ faStepForward } size="1x" color="#414141"/></button>
                     <button title="repeat all" className="all-btn"><FontAwesomeIcon icon={ faReplyAll } size="1x" color="#414141" /></button>
-                    {/* <button title="delete" className="delete-btn"><FontAwesomeIcon icon={ faTrashAlt } size="2x" /></button> */}
                 </div>
             </div>
         );
