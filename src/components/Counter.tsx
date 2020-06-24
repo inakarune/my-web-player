@@ -1,38 +1,39 @@
 import React from 'react';
+import Player from './Player';
+import List from './List';
+import firebase from 'firebase';
+import config from '../config/firebase';
+import './App.scss';
 
-interface CounterProps {
-    name: string;
-}
-  
-interface CounterState {
-    count: number;
-}
-class Counter extends React.Component<CounterProps, CounterState> {
-    constructor(props: CounterProps) {
-        super(props);
-        this.state = {
-            count: 0,
-        };
+class Counter extends React.Component {
+    public state = {
+        count: 0,
+        musicList: [],
+        selectedSong: 'Unknown',
+        url: ''
     }
-  
+
     componentDidMount() {
-        setInterval(this.increase, 1000);
+        firebase.initializeApp(config);
+        firebase.analytics();
+        firebase.storage().ref('music/').listAll().then((result: any) => {
+            this.setState({ musicList: result.items });
+        });
+    }
+
+    private selectSong = (name: string): void => {
+        firebase.storage().ref('music/' + name).getDownloadURL().then((url: string) => {
+            this.setState({ selectedSong: name, url: url });
+        });
     }
   
-    increase = () => {
-        const { count } = this.state;
-        this.setState({ count: count + 1 });
-    }
   
-    render() {
-        const { name } = this.props;
-        const { count } = this.state;
-    
+    render(): JSX.Element {
         return (
-            <React.Fragment>
-                <h1>{name} counter</h1>
-                <div>count value: {count}</div>
-            </React.Fragment>
+            <div className="player-container">
+                <Player name={ this.state.selectedSong } url={ this.state.url } />
+                <List list={ this.state.musicList } selectSong={ this.selectSong }/>
+            </div>
         );
     }
 }

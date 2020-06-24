@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'CuteFont';
+    src: url('../assets/CuteFont-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'MPLUSRounded1c';
+    src: url('../assets/MPLUSRounded1c-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+body {
+    background-color: #fff1dc;
+    font-family: CuteFont, MPLUSRounded1c;
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.player-container {
+    margin: 10% auto 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+

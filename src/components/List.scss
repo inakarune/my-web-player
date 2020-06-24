@@ -1,0 +1,58 @@
+.thumnail-img {
+    width: 50px;
+    height: 50px;
+    background-color: hsl(45, 100%, 53%);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.song-name {
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0;
+    & span {
+        color: #d8d9de;
+        font-weight: bolder;
+        font-size: 16px;
+    }
+}
+.song-list {
+    padding: 0;
+    & li {
+        cursor: pointer;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        line-height: 100%;
+    }
+}
+.list-box {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    height: 435px;
+    &::-webkit-scrollbar-thumb {
+        background-color: hsl(45, 100%, 53%);
+        border-radius: 30px;
+    }
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: white;
+    }
+}
+.list-container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 35px;
+    height: 577px;
+    box-sizing: border-box;
+    & h1 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0;
+    }
+}

@@ -5,6 +5,7 @@
 node_modules
 /dist
 src/env
+src/config
 
 # local env files
 .env.local
