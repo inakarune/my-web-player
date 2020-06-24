@@ -7,7 +7,7 @@ interface PropsFromApp {
     list: any[];
     index: number;
     selectSong: (name: string, idx: number) => void;
-    deleteSong: (name: string) => void;
+    deleteSong: (name: string, idx: number) => void;
 }
 class List extends React.Component<PropsFromApp> {
 
@@ -28,7 +28,7 @@ class List extends React.Component<PropsFromApp> {
                                 { item.name }<br/>
                                 <span className="author">Unknown</span>
                             </p>
-                            <span onClick={ () => this.props.deleteSong(item.name) }className={ this.props.index === idx ? 'trash-on' : 'trash-off' }><FontAwesomeIcon icon={ faTrashAlt } size="1x" color="white"/></span>
+                            <span onClick={ () => this.props.deleteSong(item.name, idx) }className={ this.props.index === idx ? 'trash-on' : 'trash-off' }><FontAwesomeIcon icon={ faTrashAlt } size="1x" color="white"/></span>
                         </li>)
                         }
                     </ul>

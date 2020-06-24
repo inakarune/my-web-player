@@ -44,11 +44,15 @@ class Counter extends React.Component {
         }
     }
 
-    private deleteSong = (name: string): void => {
+    private deleteSong = (name: string, idx: number): void => {
         if (prompt('비밀번호를 입력해주세요') === '2580') {
-            firebase.storage().ref('music/' + name).delete().then(() => {
+            firebase.storage().ref('music/').child(name).delete().then(() => {
+                let arr = this.state.musicList.slice();
+                arr.splice(idx, 1);
+                this.setState({ musicList: arr });
                 console.log('delete song 1');
-            });
+                this.selectSong(this.state.musicList[0].name, 0);
+            }).catch((err) => console.log(err));
         }
     }
   
