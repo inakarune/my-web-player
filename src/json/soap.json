@@ -1,0 +1,242 @@
+[
+    {
+      "oil_name_ko": "아몬드, 스윗 오일",
+      "oil_name_en": "Almond, Sweet oil",
+      "naoh": 0.136,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "살구씨(어프리콧) 오일",
+      "oil_name_en": "Apricot Kernel oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "아보카도 오일",
+      "oil_name_en": "Avocado oil",
+      "naoh": 0.133,
+      "koh": 0.186
+    },
+    {
+      "oil_name_ko": "밀랍",
+      "oil_name_en": "Beeswax",
+      "naoh": 0.069,
+      "koh": 0.096
+    },
+    {
+      "oil_name_ko": "카놀라 오일",
+      "oil_name_en": "Canola oil",
+      "naoh": 0.124,
+      "koh": 0.173
+    },
+    {
+      "oil_name_ko": "카렌듈라 오일",
+      "oil_name_en": "Calendula oil",
+      "naoh": 0.137,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "피마자 오일 (아주까리)",
+      "oil_name_en": "Castor oil",
+      "naoh": 0.128,
+      "koh": 0.180
+    },
+    {
+      "oil_name_ko": "콩기름(중국)",
+      "oil_name_en": "Chinese Bean oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "코코아 버터",
+      "oil_name_en": "Cocoa Butter",
+      "naoh": 0.137,
+      "koh": 0.191
+    },
+    {
+      "oil_name_ko": "코코넛 오일",
+      "oil_name_en": "Coconut oil",
+      "naoh": 0.190,
+      "koh": 0.266
+    },
+    {
+      "oil_name_ko": "커피콩 오일",
+      "oil_name_en": "Coffee-seed oil",
+      "naoh": 0.130,
+      "koh": 0.182
+    },
+    {
+      "oil_name_ko": "옥수수 오일",
+      "oil_name_en": "Corn oil",
+      "naoh": 0.136,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "면실유",
+      "oil_name_en": "Cottonseed oil",
+      "naoh": 0.138,
+      "koh": 0.194
+    },
+    {
+      "oil_name_ko": "달맞이꽃 오일",
+      "oil_name_en": "Evening primrose oil",
+      "naoh": 0.136,
+      "koh": 0.191
+    },
+    {
+      "oil_name_ko": "아마인 유",
+      "oil_name_en": "Flaxseed oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "포도씨 오일",
+      "oil_name_en": "Grapeseed oil",
+      "naoh": 0.126,
+      "koh": 0.177
+    },
+    {
+      "oil_name_ko": "헤이즐넛 오일",
+      "oil_name_en": "Hazelnut oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "대마유(大麻油)",
+      "oil_name_en": "Hemp Seed oil",
+      "naoh": 0.134,
+      "koh": 0.188
+    },
+    {
+      "oil_name_ko": "호호바 오일",
+      "oil_name_en": "Jojoba oil",
+      "naoh": 0.069,
+      "koh": 0.096
+    },
+    {
+      "oil_name_ko": "쿠쿠이넛 오일",
+      "oil_name_en": "Kukui Nut oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "라드",
+      "oil_name_en": "Lard",
+      "naoh": 0.138,
+      "koh": 0.193
+    },
+    {
+      "oil_name_ko": "마카다미아 오일",
+      "oil_name_en": "Macadamia oil",
+      "naoh": 0.139,
+      "koh": 0.194
+    },
+    {
+      "oil_name_ko": "망고 오일",
+      "oil_name_en": "Mango oil",
+      "naoh": 0.128,
+      "koh": 0.179
+    },
+    {
+      "oil_name_ko": "미강유",
+      "oil_name_en": "Rice Bran oil",
+      "naoh": 0.128,
+      "koh": 0.179
+    },
+    {
+      "oil_name_ko": "로즈힙 오일",
+      "oil_name_en": "Rosehip Seed oil",
+      "naoh": 0.138,
+      "koh": 0.193
+    },
+    {
+      "oil_name_ko": "밍크 오일",
+      "oil_name_en": "Mink oil",
+      "naoh": 0.140,
+      "koh": 0.196
+    },
+    {
+      "oil_name_ko": "머스타드 오일",
+      "oil_name_en": "Mustard oil",
+      "naoh": 0.124,
+      "koh": 0.173
+    },
+    {
+      "oil_name_ko": "올리브유",
+      "oil_name_en": "Olive oil",
+      "naoh": 0.134,
+      "koh": 0.187
+    },
+    {
+      "oil_name_ko": "팜 씨 오일",
+      "oil_name_en": "Palm Kernel oil",
+      "naoh": 0.156,
+      "koh": 0.218
+    },
+    {
+      "oil_name_ko": "팜유",
+      "oil_name_en": "Palm oil",
+      "naoh": 0.141,
+      "koh": 0.197
+    },
+    {
+      "oil_name_ko": "팜, 스테아르산",
+      "oil_name_en": "Palm, Stearic oil",
+      "naoh": 0.141,
+      "koh": 0.197
+    },
+    {
+      "oil_name_ko": "땅콩 오일",
+      "oil_name_en": "Peanut oil",
+      "naoh": 0.136,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "잇꽃유",
+      "oil_name_en": "Safflower oil",
+      "naoh": 0.136,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "참기름",
+      "oil_name_en": "Sesame Seed oil",
+      "naoh": 0.133,
+      "koh": 0.186
+    },
+    {
+      "oil_name_ko": "시어버터",
+      "oil_name_en": "Shea Butter",
+      "naoh": 0.128,
+      "koh": 0.179
+    },
+    {
+      "oil_name_ko": "식물성 쇼트닝",
+      "oil_name_en": "Shortening (veg.) oil",
+      "naoh": 0.136,
+      "koh": 0.190
+    },
+    {
+      "oil_name_ko": "콩기름",
+      "oil_name_en": "Soybean oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "해바라기 씨 오일",
+      "oil_name_en": "Sunflower Seed oil",
+      "naoh": 0.134,
+      "koh": 0.187
+    },
+    {
+      "oil_name_ko": "호두씨 오일",
+      "oil_name_en": "Walnut oil",
+      "naoh": 0.135,
+      "koh": 0.189
+    },
+    {
+      "oil_name_ko": "맥아 오일",
+      "oil_name_en": "Wheatgerm oil",
+      "naoh": 0.131,
+      "koh": 0.183
+    }
+  ]
