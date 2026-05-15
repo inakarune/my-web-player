@@ -1,38 +1,184 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #001f3f, #4a69bd, #6a1b9a, #ff9aab);
+  background-repeat: repeat;
+  background-origin: content-box;
+  transition: background 1s ease;
+}
+
+.music-player-container {
+  width: 400px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4.5px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 100px auto 50px auto;
+  display: block;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.glass-button-side {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-button-side:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.glass-button-side:active {
+  transform: scale(0.95);
+}
+
+.glass-button {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.glass-button:active {
+  transform: scale(0.95);
+}
+
+.play-icon {
+  border: none;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  background: none;
+}
+
+.player-container {
+  position: relative;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.progress-container {
+  position: relative;
+  z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.progress-ring {
+  transform: rotate(-90deg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+#frequencyCanvas {
+  width: 100vw;
+  height: 45vh;
+  position: absolute;
+  bottom: -19vh;
+  left: -8vw;
+  z-index: 1;
+  filter: blur(8px);
+  opacity: 0.8;
+}
+
+.list-box {
+  min-width: 400px;
+  max-width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4.5px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 100px auto 100px auto;
+  display: block;
   color: white;
+  font-weight: 100;
+  overflow-y: scroll;
+}
+.song-list li {
+  cursor: pointer;
+}
+.timeline {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+}
+.title {
+  color: white;
+  font-size: 18px;
+}
+/* 스크롤바의 기본 스타일을 설정합니다 */
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 */
+  background: transparent; /* 스크롤바의 배경색을 투명으로 설정 */
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* 스크롤바의 색상 및 투명도 */
+  border-radius: 10px; /* 스크롤바의 둥근 모서리 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* 스크롤바에 마우스를 올렸을 때 색상 */
+}
+
+@media only screen and (max-width: 768px) {
+  .list-box {
+    overflow-y: initial;
+    height: auto;
+    margin-top: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  #frequencyCanvas {
+    width: 100vw;
+    height: 45vh;
+    position: absolute;
+    bottom: -11vh;
+    left: -8vw;
+    z-index: 1;
+    filter: blur(8px);
+    opacity: 0.8;
   }
 }
